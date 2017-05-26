@@ -1,0 +1,14 @@
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\bin\Debug\Tagger.exe.config
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\bin\Debug\Tagger.exe
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\bin\Debug\Tagger.pdb
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\obj\Debug\Tagger.csprojResolveAssemblyReference.cache
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\obj\Debug\MainWindow.g.cs
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\obj\Debug\App.g.cs
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\obj\Debug\Tagger_MarkupCompile.cache
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\obj\Debug\Tagger_MarkupCompile.lref
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\obj\Debug\MainWindow.baml
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\obj\Debug\Tagger.g.resources
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\obj\Debug\Tagger.Properties.Resources.resources
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\obj\Debug\Tagger.csproj.GenerateResource.Cache
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\obj\Debug\Tagger.exe
+D:\Users Documents\Desktop\AuthCode\Tagger\Tagger\Tagger\obj\Debug\Tagger.pdb

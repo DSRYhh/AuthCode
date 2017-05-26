@@ -1,0 +1,16 @@
+﻿<Window x:Class="Tagger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tagger"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical">
+                <Image x:Name="AuthCode"/>
+                <TextBox x:Name="TagBox" KeyDown="TagBox_OnKeyDown" FontSize="25"/>
+            </StackPanel>
+            <TextBlock x:Name="Hint"/>
+        </StackPanel>
+</Window>
