@@ -50,5 +50,6 @@ i = randi(999);
     imshow(image(:,41:60))
     subplot(1,5,5)
     imshow(image(:,61:80))
-   
+    
+    
 % end

@@ -27,7 +27,7 @@ namespace Tagger
         private string TrainingSetPath = @"D:\Users Documents\Desktop\AuthCode\dataset";
         private int CurrentIndex;
         private Dictionary<string,string> dataList = new Dictionary<string, string>();
-        private HashSet<int> taggedData = new HashSet<int>();
+        private readonly HashSet<int> taggedData = new HashSet<int>();
         public MainWindow()
         {
             InitializeComponent();
@@ -57,6 +57,12 @@ namespace Tagger
         {
             if (e.Key == Key.Enter)
             {
+                string text = TagBox.Text;
+                if (!Regex.Match(text, @"[\d]{4}").Success)
+                {
+                    TagBox.Text = String.Empty;
+                    return;
+                }
                 dataList.Add($"{CurrentIndex}.jpg",TagBox.Text);
                 taggedData.Add(CurrentIndex);
                 UpdateDateFile($"{CurrentIndex}.jpg",TagBox.Text);
@@ -102,7 +108,7 @@ namespace Tagger
             }
         }
 
-        private void UpdateDateFile(string filename, string tag)
+        private static void UpdateDateFile(string filename, string tag)
         {
             var contact = new XElement("authcode", new XAttribute("filename", filename), new XAttribute("tag", tag));
             var doc = new XDocument();
