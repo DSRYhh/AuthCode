@@ -5,12 +5,11 @@ load('weights.mat');
 %% Predict
 
 imageindex = randi(100) + 700;
-filename = strcat('..\dataset\' ,num2str(imageindex),'.jpg');
+filename = strcat('dataset\' ,num2str(imageindex),'.jpg');
 I = imread(filename);
 I = imbinarize(I);
-cd ..
 img = split(I);
-cd Train
+
 pred = predict(Theta1, Theta2, img);
 fprintf('Predict result: %d %d %d %d\n in %s', ...
     pred(1), pred(2), pred(3), pred(4), filename);

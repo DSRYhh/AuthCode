@@ -1,3 +1,7 @@
+%% Read data
+fprintf('Updating training data.');
+datareadin();
+
 %% Initialization
 clear;
 
@@ -13,7 +17,7 @@ initial_Theta2 = randInitializeWeights(hidden_layer_size, num_labels);
 initial_nn_params = [initial_Theta1(:) ; initial_Theta2(:)];
 
 %% Load data
-load('..\data.mat');
+load('data.mat');
 dataLength = size(data,1);
 X = X(1:dataLength,:);
 
