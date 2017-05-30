@@ -23,7 +23,7 @@ X = X(1:dataLength,:);
 
 
 %% Train NN
-options = optimset('MaxIter', 10000);
+options = optimset('MaxIter', 50000);
 lambda = 1; %for regulaztion
 
 costFunction = @(p) nnCostFunction(p, ...
