@@ -1,6 +1,6 @@
 %% Read data
 fprintf('Updating training data.');
-datareadin();
+%datareadin();
 
 %% Initialization
 clear;
@@ -20,14 +20,14 @@ initial_nn_params = [initial_Theta1(:) ; initial_Theta2(:)];
 load('data.mat');
 dataLength = size(data,1); %data: Y, X: image
 dataVeriLength = int16(dataLength * 0.3);
-XVeri = X(1:dataVeriLength);
-YVeri = data(1:dataVeriLength);
+XVeri = X(1:dataVeriLength,:);
+YVeri = data(1:dataVeriLength,:);
 X = X(dataVeriLength + 1:end,:);
 data = data(dataVeriLength + 1:end,:);
 
 
 %% Train NN
-options = optimset('MaxIter', 50000);
+options = optimset('MaxIter', 5000);
 lambda = 1; %for regulaztion
 
 costFunction = @(p) nnCostFunction(p, ...
