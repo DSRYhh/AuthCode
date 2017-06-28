@@ -8,11 +8,11 @@
 %     imshow(I);
 
     I = ~I;
-    
+        
     itertime = 0;
     bestJ = 10^10;
     for itertime = 1 : 500
-        fprintf('iter: %d\n',itertime);
+%         fprintf('iter: %d\n',itertime);
     %     centroid = [10,7;10,22;10,37;10,52];    
 %         centroid = [randi(20),randi(60);randi(20),randi(60);randi(20),randi(60);randi(20),randi(60)];
         centroid = [10,randi(60);10,randi(60);10,randi(60);10,randi(60)];
@@ -57,18 +57,25 @@
         end
 
         J = 0;
-        for i = 1 : 20
+        numofclass = zeros(4,1);
+        for i = 1 : 20 %add distance
             for j = 1 : 60
                 classofthispoint = classofpoint(i,j);
                 center = centroid(n,:);
                 distance = (abs(i-center(1)))^2 + (abs(j-center(2)))^2;
                 J = J + distance;
+                
+                numofclass(classofthispoint) = numofclass(classofthispoint) + I(i,j);
             end
         end
+        
+        
+        J = J + 500 * var(numofclass);
         if J < bestJ
             bestJ = J;
             finalclass = classofpoint;
-            fprintf('J = %f\n',J);
+            fprintf('J = %f, variance = %f\n',J,var(numofclass));
+            disp(numofclass);
         end
     end
     
