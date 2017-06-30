@@ -1,6 +1,7 @@
 %% Read data
 fprintf('Updating training data.');
-%datareadin();
+% datareadin();
+fprintf('Training data updated.');
 
 %% Initialization
 clear;

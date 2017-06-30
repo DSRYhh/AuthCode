@@ -39,6 +39,7 @@ function datareadin()
     %% Read x
     X = zeros(4*1000,400);
     for index = 0 : 999
+        fprintf('Loading file %d\n',index);
         filename = strcat('dataset\' ,num2str(index),'.jpg');
         I = imread(filename);
         imgs = split(I);
